@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Design | SMART SPACE</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="result-page">
+
+<nav class="navbar">
+    <a class="nav-logo result-logo" href="dashboard.html">
+        <div class="logo-mark">S</div>
+        <div>
+            <h2>SMART SPACE</h2>
+            <span>AI INTERIOR DESIGN</span>
+        </div>
+    </a>
+
+    <div class="nav-links">
+        <a href="dashboard.html">Home</a>
+        <a href="dashboard.html">My Spaces</a>
+        <a href="dashboard.html">Floor Plan</a>
+    </div>
+
+    <div class="nav-profile">
+        <div class="profile-avatar" id="profileAvatar">A</div>
+        <div class="profile-info">
+            <strong id="profileName">User</strong>
+            <span>My Account</span>
+        </div>
+    </div>
+</nav>
+
+<header class="result-hero">
+    <div class="result-hero-inner">
+        <div>
+            <span class="eyebrow">STEP 03 · YOUR DESIGN CONCEPT</span>
+            <h1>Your space,<br><span>reimagined.</span></h1>
+            <p>
+                Explore your personalized design brief, furniture
+                suggestions and estimated budget.
+            </p>
+        </div>
+
+        <div class="result-status">
+            <span class="status-dot"></span>
+            Design brief created
+        </div>
+    </div>
+
+    <div class="result-progress">
+        <div class="result-progress-item complete"><span>✓</span> Room</div>
+        <i></i>
+        <div class="result-progress-item complete"><span>✓</span> Preferences</div>
+        <i></i>
+        <div class="result-progress-item current"><span>3</span> Design concept</div>
+    </div>
+</header>
+
+<main class="result-container">
+
+    <section class="result-intro">
+        <div>
+            <span class="eyebrow">YOUR PERSONALIZED BRIEF</span>
+            <h2 id="resultTitle">Modern Living Room</h2>
+            <p id="resultSubtitle">
+                A concept shaped around your style, comfort and budget.
+            </p>
+        </div>
+
+        <button class="outline-action"
+                onclick="location.href='preferences.html'">
+            ← Edit preferences
+        </button>
+    </section>
+
+    <section class="design-preview-grid">
+
+        <article class="preview-card">
+            <div class="preview-label">
+                <span>YOUR ROOM</span>
+                <span class="preview-tag">ORIGINAL</span>
+            </div>
+
+            <div class="preview-image original-preview" id="originalPreview">
+                <div class="preview-placeholder" id="originalPlaceholder">
+                    <span>⌂</span>
+                    <strong>No room photo supplied</strong>
+                    <p>You can use measurements instead.</p>
+                </div>
+            </div>
+
+            <div class="preview-caption">
+                <strong>Original space</strong>
+                <span id="roomDimensions">Measurements not provided</span>
+            </div>
+        </article>
+
+        <article class="preview-card">
+            <div class="preview-label">
+                <span>DESIGN DIRECTION</span>
+                <span class="preview-tag concept-tag">CONCEPT PREVIEW</span>
+            </div>
+
+            <div class="preview-image design-preview" id="designPreview">
+                <div class="design-overlay">
+                    <span class="design-sparkle">✦</span>
+                    <span class="concept-label">SMART SPACE CONCEPT</span>
+                    <h3 id="previewStyle">Warm modern living</h3>
+                    <p id="previewPalette">Warm Neutrals · Warm lighting</p>
+                </div>
+            </div>
+
+            <div class="preview-caption">
+                <strong>Proposed design direction</strong>
+                <span>Illustrative preview</span>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="concept-notice">
+        <span>✦</span>
+        <p>
+            <strong>Prototype note:</strong> This page creates a design brief
+            from your saved choices. The design panel is not yet an AI-generated
+            room image. Real computer-vision analysis and AI image generation
+            will be integrated through the backend.
+        </p>
+    </div>
+
+    <section class="result-details-grid">
+
+        <article class="result-panel">
+            <div class="panel-heading">
+                <span class="panel-icon">✦</span>
+                <div>
+                    <h3>Your design direction</h3>
+                    <p>Based on your selected preferences</p>
+                </div>
+            </div>
+
+            <div class="summary-row">
+                <span>Room</span><strong id="summaryRoom">Living Room</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Interior style</span><strong id="summaryStyle">Modern</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Color palette</span><strong id="summaryColor">Warm Neutrals</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Lighting</span><strong id="summaryLighting">Warm</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Budget range</span><strong id="summaryBudget">Not selected</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Room area</span><strong id="summaryArea">Not provided</strong>
+            </div>
+
+            <div class="recommendation-copy" id="recommendationCopy">
+                Choose comfortable furniture, coordinated colors and practical
+                lighting while keeping clear walking paths.
+            </div>
+        </article>
+
+        <article class="result-panel">
+            <div class="panel-heading">
+                <span class="panel-icon">⌂</span>
+                <div>
+                    <h3>Furniture & decor checklist</h3>
+                    <p>Items to consider for your room</p>
+                </div>
+            </div>
+
+            <div id="furnitureList" class="furniture-list"></div>
+
+            <p class="small-disclaimer">
+                These are planning suggestions, not verified product listings.
+                Product links and live prices can be added later.
+            </p>
+        </article>
+
+    </section>
+
+    <section class="budget-panel">
+        <div class="budget-heading">
+            <div>
+                <span class="eyebrow">BUDGET PLANNING</span>
+                <h2>A starting point for your budget</h2>
+                <p>This is an illustrative allocation, not a vendor quote.</p>
+            </div>
+
+            <div class="budget-total">
+                <span>Selected budget</span>
+                <strong id="budgetTotal">Not selected</strong>
+            </div>
+        </div>
+
+        <div id="budgetBreakdown" class="budget-breakdown"></div>
+
+        <p class="budget-footnote">
+            Actual costs depend on room size, materials, location, labor
+            and the products you choose.
+        </p>
+    </section>
+
+    <section class="requirements-panel">
+        <div class="panel-heading">
+            <span class="panel-icon">✎</span>
+            <div>
+                <h3>Your special requirements</h3>
+                <p>Additional notes for your design</p>
+            </div>
+        </div>
+
+        <p id="specialSummary">No additional requirements provided.</p>
+    </section>
+
+    <section class="result-actions">
+        <div>
+            <h3>Want to try another direction?</h3>
+            <p>Update your choices or begin designing another room.</p>
+        </div>
+
+        <div class="result-action-buttons">
+            <button class="outline-action"
+                    onclick="location.href='preferences.html'">
+                Edit preferences
+            </button>
+
+            <button class="primary-action" onclick="startNewDesign()">
+                Design another room <span>→</span>
+            </button>
+        </div>
+    </section>
+
+</main>
+
+<footer class="result-footer">
+    SMART SPACE <span>·</span> Design thoughtfully. Live beautifully.
+</footer>
+
+<script src="js/result.js"></script>
+</body>
+</html>
