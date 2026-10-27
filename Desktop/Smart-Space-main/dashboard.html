@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SMART SPACE | Dashboard</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-brand">
+
+        <div class="nav-logo">
+            S
+        </div>
+
+        <span>
+            SMART SPACE
+        </span>
+
+    </div>
+
+
+    <nav class="nav-menu">
+
+        <a href="#" class="active">
+            Home
+        </a>
+
+        <a href="#rooms">
+            My Spaces
+        </a>
+
+        <a href="#floorplan">
+            Floor Plan
+        </a>
+
+        <a href="#how-it-works">
+            How it works
+        </a>
+
+    </nav>
+
+
+    <div class="nav-right">
+
+        <button class="nav-icon">
+            ♡
+        </button>
+
+        <button class="nav-icon">
+            🔔
+        </button>
+
+        <div class="profile">
+
+            <div class="profile-avatar"
+                 id="profileAvatar">
+
+                A
+
+            </div>
+
+            <div class="profile-info">
+
+                <strong id="profileName">
+                    Amrutha
+                </strong>
+
+                <span>
+                    Home Designer
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="dashboard-main">
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="dashboard-hero">
+
+        <div class="hero-text">
+
+            <p class="hero-label">
+                YOUR PERSONAL DESIGN STUDIO
+            </p>
+
+            <h1>
+                Good evening,
+                <em id="heroName">
+                    Amrutha
+                </em>.
+            </h1>
+
+            <p class="hero-description">
+
+                Let's create a space that is beautiful,
+                functional and uniquely yours.
+
+            </p>
+
+
+            <button
+                class="start-design-btn"
+                onclick="openRoom('Living Room')">
+
+                <span class="plus">
+                    +
+                </span>
+
+                Start a new design
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <div class="hero-decoration">
+
+            <div class="decor-circle circle-one"></div>
+
+            <div class="decor-circle circle-two"></div>
+
+            <div class="decor-text">
+
+                <span>
+                    ✦
+                </span>
+
+                AI
+
+                <small>
+                    powered
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ROOM SECTION ================= -->
+
+    <section
+        class="rooms-section"
+        id="rooms">
+
+
+        <div class="section-top">
+
+            <div>
+
+                <p class="section-label">
+                    EXPLORE YOUR HOME
+                </p>
+
+                <h2>
+                    Choose a room to transform
+                </h2>
+
+            </div>
+
+
+            <span class="room-count">
+
+                6 spaces available
+
+            </span>
+
+        </div>
+
+
+
+        <!-- ROOM GRID -->
+
+        <div class="rooms-grid">
+
+
+            <!-- LIVING ROOM -->
+
+            <div
+                class="room-card room-large"
+                onclick="openRoom('Living Room')">
+
+                <div class="room-image living-image">
+
+                    <div class="room-gradient"></div>
+
+                    <div class="room-number">
+                        01
+                    </div>
+
+                    <div class="room-details">
+
+                        <h3>
+                            Living Room
+                        </h3>
+
+                        <p>
+                            Comfort · Conversation · Character
+                        </p>
+
+                    </div>
+
+                    <div class="room-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- KITCHEN -->
+
+            <div
+                class="room-card"
+                onclick="openRoom('Kitchen')">
+
+                <div class="room-image kitchen-image">
+
+                    <div class="room-gradient"></div>
+
+                    <div class="room-number">
+                        02
+                    </div>
+
+                    <div class="room-details">
+
+                        <h3>
+                            Kitchen
+                        </h3>
+
+                        <p>
+                            Function · Flow · Storage
+                        </p>
+
+                    </div>
+
+                    <div class="room-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BEDROOM -->
+
+            <div
+                class="room-card"
+                onclick="openRoom('Bedroom')">
+
+                <div class="room-image bedroom-image">
+
+                    <div class="room-gradient"></div>
+
+                    <div class="room-number">
+                        03
+                    </div>
+
+                    <div class="room-details">
+
+                        <h3>
+                            Bedroom
+                        </h3>
+
+                        <p>
+                            Calm · Comfort · Rest
+                        </p>
+
+                    </div>
+
+                    <div class="room-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DINING -->
+
+            <div
+                class="room-card"
+                onclick="openRoom('Dining Room')">
+
+                <div class="room-image dining-image">
+
+                    <div class="room-gradient"></div>
+
+                    <div class="room-number">
+                        04
+                    </div>
+
+                    <div class="room-details">
+
+                        <h3>
+                            Dining Room
+                        </h3>
+
+                        <p>
+                            Gather · Share · Enjoy
+                        </p>
+
+                    </div>
+
+                    <div class="room-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BATHROOM -->
+
+            <div
+                class="room-card"
+                onclick="openRoom('Bathroom')">
+
+                <div class="room-image bathroom-image">
+
+                    <div class="room-gradient"></div>
+
+                    <div class="room-number">
+                        05
+                    </div>
+
+                    <div class="room-details">
+
+                        <h3>
+                            Bathroom
+                        </h3>
+
+                        <p>
+                            Refresh · Relax · Reset
+                        </p>
+
+                    </div>
+
+                    <div class="room-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STUDY -->
+
+            <div
+                class="room-card"
+                onclick="openRoom('Study Room')">
+
+                <div class="room-image study-image">
+
+                    <div class="room-gradient"></div>
+
+                    <div class="room-number">
+                        06
+                    </div>
+
+                    <div class="room-details">
+
+                        <h3>
+                            Study Room
+                        </h3>
+
+                        <p>
+                            Focus · Create · Work
+                        </p>
+
+                    </div>
+
+                    <div class="room-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FLOOR PLAN ================= -->
+
+    <section
+        class="floor-section"
+        id="floorplan">
+
+
+        <div class="floor-information">
+
+            <p class="section-label">
+                YOUR HOME AT A GLANCE
+            </p>
+
+            <h2>
+                Explore your
+                <em>
+                    floor plan.
+                </em>
+            </h2>
+
+            <p class="floor-description">
+
+                Select any room from your 2D home layout
+                to begin creating a personalized interior
+                design.
+
+            </p>
+
+
+            <div class="ai-feature">
+
+                <div class="ai-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <strong>
+                        Smart AI Recommendations
+                    </strong>
+
+                    <p>
+                        Design suggestions adapt to your
+                        room, preferences and available space.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 2D HOUSE -->
+
+        <div class="floor-plan-container">
+
+
+            <div class="floor-title">
+
+                2D HOME PLAN
+
+            </div>
+
+
+            <div class="floor-plan">
+
+
+                <!-- BEDROOM -->
+
+                <button
+                    class="floor-room bedroom-floor"
+                    onclick="openRoom('Bedroom')">
+
+                    <span>
+                        BEDROOM
+                    </span>
+
+                    <strong>
+                        🛏
+                    </strong>
+
+                    <small>
+                        Click to design
+                    </small>
+
+                </button>
+
+
+
+                <!-- KITCHEN -->
+
+                <button
+                    class="floor-room kitchen-floor"
+                    onclick="openRoom('Kitchen')">
+
+                    <span>
+                        KITCHEN
+                    </span>
+
+                    <strong>
+                        🍳
+                    </strong>
+
+                    <small>
+                        Click to design
+                    </small>
+
+                </button>
+
+
+
+                <!-- LIVING -->
+
+                <button
+                    class="floor-room living-floor"
+                    onclick="openRoom('Living Room')">
+
+                    <span>
+                        LIVING ROOM
+                    </span>
+
+                    <strong>
+                        🛋
+                    </strong>
+
+                    <small>
+                        Click to design
+                    </small>
+
+                </button>
+
+
+
+                <!-- DINING -->
+
+                <button
+                    class="floor-room dining-floor"
+                    onclick="openRoom('Dining Room')">
+
+                    <span>
+                        DINING
+                    </span>
+
+                    <strong>
+                        🍽
+                    </strong>
+
+                    <small>
+                        Click to design
+                    </small>
+
+                </button>
+
+
+
+                <!-- BATHROOM -->
+
+                <button
+                    class="floor-room bathroom-floor"
+                    onclick="openRoom('Bathroom')">
+
+                    <span>
+                        BATHROOM
+                    </span>
+
+                    <strong>
+                        🚿
+                    </strong>
+
+                    <small>
+                        Click to design
+                    </small>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section
+        class="how-section"
+        id="how-it-works">
+
+
+        <div class="section-top">
+
+            <div>
+
+                <p class="section-label">
+                    HOW SMART SPACE WORKS
+                </p>
+
+                <h2>
+                    From room to dream space.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Share your space
+                </h3>
+
+                <p>
+                    Upload a room photo or provide
+                    your room measurements.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Tell us your style
+                </h3>
+
+                <p>
+                    Choose your preferred style,
+                    colors, furniture and budget.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Let AI design
+                </h3>
+
+                <p>
+                    Smart Space analyzes your
+                    requirements and creates a design.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Refine your space
+                </h3>
+
+                <p>
+                    Review recommendations and
+                    refine your design.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /*
+        Get user name from login page
+    */
+
+    const savedUser =
+        localStorage.getItem("smartspaceUser");
+
+    if(savedUser){
+
+        let name =
+            savedUser.split("@")[0];
+
+        name =
+            name.charAt(0).toUpperCase()
+            + name.slice(1);
+
+        document.getElementById("heroName")
+            .textContent = name;
+
+        document.getElementById("profileName")
+            .textContent = name;
+
+        document.getElementById("profileAvatar")
+            .textContent =
+            name.charAt(0).toUpperCase();
+
+    }
+
+
+    /*
+        Open selected room
+    */
+
+    function openRoom(room){
+
+        localStorage.setItem(
+            "smartspaceRoom",
+            room
+        );
+
+        window.location.href =
+            "room.html?room="
+            + encodeURIComponent(room);
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

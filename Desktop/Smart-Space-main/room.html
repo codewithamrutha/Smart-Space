@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Room Analysis | SMART SPACE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="room-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            <div class="logo-mark">S</div>
+
+            <div>
+                <h2>SMART SPACE</h2>
+                <span>AI INTERIOR DESIGN</span>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Home</a>
+            <a href="dashboard.html">My Spaces</a>
+            <a href="dashboard.html">Floor Plan</a>
+            <a href="#how">How it works</a>
+        </div>
+
+        <div class="nav-profile">
+            <div class="profile-avatar" id="profileAvatar">A</div>
+
+            <div class="profile-info">
+                <strong id="profileName">User</strong>
+                <span>My Account</span>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+    <section class="room-header">
+
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>/</span>
+            <strong id="breadcrumbRoom">Living Room</strong>
+        </div>
+
+        <div class="room-heading">
+
+            <div>
+                <span class="eyebrow">STEP 01 · ROOM ANALYSIS</span>
+
+                <h1>
+                    Let's understand<br>
+                    <span>your space.</span>
+                </h1>
+
+                <p>
+                    Give SMART SPACE a little information about your room.
+                    You can upload a photo of the existing space or enter
+                    the room measurements manually.
+                </p>
+            </div>
+
+            <div class="step-indicator">
+                <div class="step active">
+                    <span>1</span>
+                    <p>Room</p>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step">
+                    <span>2</span>
+                    <p>Preferences</p>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step">
+                    <span>3</span>
+                    <p>AI Design</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN ROOM ANALYSIS -->
+    <main class="room-container">
+
+        <!-- SELECTED ROOM -->
+        <div class="selected-room-card">
+
+            <div class="selected-room-icon" id="roomIcon">
+                🛋️
+            </div>
+
+            <div>
+                <span>DESIGNING</span>
+                <h2 id="selectedRoom">Living Room</h2>
+            </div>
+
+            <button class="change-room-btn" onclick="window.location.href='dashboard.html'">
+                Change room
+            </button>
+
+        </div>
+
+
+        <!-- CHOICE TITLE -->
+        <div class="analysis-title">
+
+            <span class="eyebrow">CHOOSE YOUR INPUT</span>
+
+            <h2>
+                How would you like to
+                <span>describe your room?</span>
+            </h2>
+
+            <p>
+                Choose whichever option is easier for you.
+                You can also provide both for better AI recommendations.
+            </p>
+
+        </div>
+
+
+        <!-- INPUT OPTIONS -->
+        <div class="analysis-grid">
+
+            <!-- PHOTO OPTION -->
+            <div class="analysis-card photo-card">
+
+                <div class="card-top">
+
+                    <div class="analysis-icon">
+                        📷
+                    </div>
+
+                    <span class="recommended-badge">
+                        RECOMMENDED
+                    </span>
+
+                </div>
+
+                <h3>Upload Room Photo</h3>
+
+                <p>
+                    Let our AI analyze your existing room using
+                    computer vision and understand its layout,
+                    furniture and available space.
+                </p>
+
+
+                <!-- UPLOAD AREA -->
+                <div class="upload-area" id="uploadArea">
+
+                    <input
+                        type="file"
+                        id="roomImage"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <div id="uploadContent">
+
+                        <div class="upload-icon">
+                            ↑
+                        </div>
+
+                        <h4>Drop your room photo here</h4>
+
+                        <p>or click to browse from your device</p>
+
+                        <button
+                            type="button"
+                            class="browse-btn"
+                            onclick="document.getElementById('roomImage').click()"
+                        >
+                            Choose Photo
+                        </button>
+
+                        <small>
+                            JPG, PNG or WEBP · Max 10 MB
+                        </small>
+
+                    </div>
+
+                    <!-- IMAGE PREVIEW -->
+                    <div id="imagePreview" class="image-preview hidden">
+
+                        <img id="previewImage" src="" alt="Room preview">
+
+                        <div class="preview-overlay">
+
+                            <div>
+                                <strong id="fileName">
+                                    Room photo
+                                </strong>
+
+                                <span id="fileSize">
+                                    0 MB
+                                </span>
+                            </div>
+
+                            <button
+                                type="button"
+                                onclick="removeImage(event)"
+                            >
+                                Remove
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-note">
+                    <span>✦</span>
+                    AI will later identify furniture, walls,
+                    floor area and room structure.
+                </div>
+
+            </div>
+
+
+            <!-- MEASUREMENTS OPTION -->
+            <div class="analysis-card measurement-card">
+
+                <div class="card-top">
+
+                    <div class="analysis-icon">
+                        📐
+                    </div>
+
+                    <span class="optional-badge">
+                        OPTIONAL
+                    </span>
+
+                </div>
+
+                <h3>Enter Measurements</h3>
+
+                <p>
+                    Don't have a photo? No problem. Enter your room
+                    dimensions and we'll use them to create a
+                    space-aware design.
+                </p>
+
+
+                <div class="measurement-form">
+
+                    <!-- LENGTH -->
+                    <div class="input-group">
+
+                        <label for="length">
+                            Room Length
+                        </label>
+
+                        <div class="unit-input">
+
+                            <input
+                                type="number"
+                                id="length"
+                                placeholder="e.g. 15"
+                                min="1"
+                                step="0.1"
+                            >
+
+                            <span>ft</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WIDTH -->
+                    <div class="input-group">
+
+                        <label for="width">
+                            Room Width
+                        </label>
+
+                        <div class="unit-input">
+
+                            <input
+                                type="number"
+                                id="width"
+                                placeholder="e.g. 12"
+                                min="1"
+                                step="0.1"
+                            >
+
+                            <span>ft</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HEIGHT -->
+                    <div class="input-group">
+
+                        <label for="height">
+                            Ceiling Height
+                        </label>
+
+                        <div class="unit-input">
+
+                            <input
+                                type="number"
+                                id="height"
+                                placeholder="e.g. 10"
+                                min="1"
+                                step="0.1"
+                            >
+
+                            <span>ft</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WINDOWS -->
+                    <div class="input-group">
+
+                        <label for="windows">
+                            Number of Windows
+                        </label>
+
+                        <div class="number-input">
+
+                            <button
+                                type="button"
+                                onclick="changeNumber('windows', -1)"
+                            >
+                                −
+                            </button>
+
+                            <input
+                                type="number"
+                                id="windows"
+                                value="2"
+                                min="0"
+                                max="20"
+                            >
+
+                            <button
+                                type="button"
+                                onclick="changeNumber('windows', 1)"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DOORS -->
+                    <div class="input-group">
+
+                        <label for="doors">
+                            Number of Doors
+                        </label>
+
+                        <div class="number-input">
+
+                            <button
+                                type="button"
+                                onclick="changeNumber('doors', -1)"
+                            >
+                                −
+                            </button>
+
+                            <input
+                                type="number"
+                                id="doors"
+                                value="1"
+                                min="0"
+                                max="10"
+                            >
+
+                            <button
+                                type="button"
+                                onclick="changeNumber('doors', 1)"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOOR -->
+                    <div class="input-group">
+
+                        <label for="floorType">
+                            Existing Floor
+                        </label>
+
+                        <select id="floorType">
+
+                            <option value="">
+                                Select floor type
+                            </option>
+
+                            <option value="marble">
+                                Marble
+                            </option>
+
+                            <option value="wood">
+                                Wooden
+                            </option>
+
+                            <option value="tiles">
+                                Tiles
+                            </option>
+
+                            <option value="carpet">
+                                Carpet
+                            </option>
+
+                            <option value="concrete">
+                                Concrete
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="measurement-tip">
+
+                    <div class="tip-icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <strong>Why measurements matter?</strong>
+
+                        <p>
+                            Accurate dimensions help SMART SPACE
+                            recommend furniture that actually fits
+                            your available space.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTINUE -->
+        <div class="continue-section">
+
+            <div class="continue-info">
+
+                <div class="secure-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <strong>Your information stays private</strong>
+                    <span>
+                        Your room information is only used to
+                        generate your personalized design.
+                    </span>
+                </div>
+
+            </div>
+
+            <button
+                class="continue-btn"
+                onclick="continueToPreferences()"
+            >
+                Continue to Preferences
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="room-how" id="how">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">WHAT HAPPENS NEXT?</span>
+
+            <h2>
+                From your room to your
+                <span>dream space.</span>
+            </h2>
+
+        </div>
+
+        <div class="mini-process">
+
+            <div>
+                <span>01</span>
+                <h3>Analyze</h3>
+                <p>
+                    AI understands your room structure,
+                    dimensions and existing elements.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Personalize</h3>
+                <p>
+                    You tell us your preferred style,
+                    colors, budget and furniture needs.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Design</h3>
+                <p>
+                    SMART SPACE generates an interior
+                    concept tailored specifically to you.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="js/room.js"></script>
+
+</body>
+</html>
