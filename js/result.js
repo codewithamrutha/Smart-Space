@@ -314,3 +314,79 @@ function startNewDesign() {
 
     window.location.href = "dashboard.html";
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("ikea-products");
+
+    if (!container) return;
+
+    if (typeof Papa === "undefined") {
+        container.textContent = "CSV parser could not load. Check your internet connection.";
+        return;
+    }
+
+    Papa.parse("data/ikea.csv", {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+
+        complete: function (results) {
+            const products = results.data;
+
+            const budget = Number(
+                JSON.parse(localStorage.getItem("designPreferences") || "{}").budget
+            ) || Infinity;
+
+            const suitableProducts = products
+                .filter(product =>
+                    product.name &&
+                    product.link &&
+                    Number.isFinite(Number(product.price)) &&
+                    Number(product.price) > 0 &&
+                    Number(product.price) <= budget
+                )
+                .slice(0, 12);
+
+            container.innerHTML = "";
+
+            if (suitableProducts.length === 0) {
+                container.textContent =
+                    "No matching products found. Try increasing your budget.";
+                return;
+            }
+
+            suitableProducts.forEach(product => {
+                const card = document.createElement("article");
+                card.className = "ikea-card";
+
+                const title = document.createElement("h3");
+                title.textContent = product.name;
+
+                const category = document.createElement("p");
+                category.textContent = product.category || "Furniture";
+
+                const price = document.createElement("p");
+                price.textContent = `Dataset price: ${product.price}`;
+
+                const dimensions = document.createElement("p");
+                dimensions.textContent =
+                    `W: ${product.width || "N/A"} | ` +
+                    `D: ${product.depth || "N/A"} | ` +
+                    `H: ${product.height || "N/A"}`;
+
+                const link = document.createElement("a");
+                link.href = product.link;
+                link.textContent = "View IKEA Product";
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+
+                card.append(title, category, price, dimensions, link);
+                container.appendChild(card);
+            });
+        },
+
+        error: function () {
+            container.textContent =
+                "Unable to load the IKEA dataset. Check the file path.";
+        }
+    });
+});
