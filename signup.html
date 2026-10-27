@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | SMART SPACE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .form-box { max-width: 380px; width: 100%; padding: 24px 0; }
+    .form-box h1 { font-size: 38px; }
+    .input-box { margin-bottom: 15px; }
+    .form-message { min-height: 20px; margin: 12px 0; font-size: 13px; line-height: 1.5; }
+    .form-message.error { color: #b42318; }
+    .form-message.success { color: #18794e; }
+    .signup-page .right-panel { padding: 24px; box-sizing: border-box; }
+    @media(max-height: 760px) { .signup-page { min-height: 100vh; height: auto; } }
+  </style>
+</head>
+<body>
+<div class="login-container signup-page">
+  <div class="left-panel">
+    <div class="overlay"></div>
+    <div class="brand"><div class="logo">S</div><h2>SMART SPACE</h2></div>
+    <div class="left-content">
+      <p class="small-title">INTELLIGENT INTERIOR DESIGN</p>
+      <h1>Create a home<br><span>that feels like you.</span></h1>
+      <p class="description">Create an account to start exploring personalized interior design ideas.</p>
+    </div>
+    <div class="ai-badge">✦ AI Powered Interior Design</div>
+  </div>
+  <div class="right-panel">
+    <div class="form-box">
+      <p class="welcome">JOIN SMART SPACE</p>
+      <h1>Create your<br>account.</h1>
+      <p class="subtitle">Sign up to begin your design journey.</p>
+      <form id="signupForm">
+        <label for="name">Full Name</label>
+        <div class="input-box"><span>♙</span><input id="name" type="text" placeholder="Your full name" autocomplete="name" required minlength="2"></div>
+        <label for="email">Email Address</label>
+        <div class="input-box"><span>✉</span><input id="email" type="email" placeholder="you@example.com" autocomplete="email" required></div>
+        <label for="password">Create Password</label>
+        <div class="input-box"><span>🔒</span><input id="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" required minlength="6"></div>
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-box"><span>🔒</span><input id="confirmPassword" type="password" placeholder="Enter password again" autocomplete="new-password" required minlength="6"></div>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        <button class="login-btn" type="submit">Create Account <span>→</span></button>
+      </form>
+      <p class="signup">Already have an account? <a href="index.html">Sign In</a></p>
+    </div>
+  </div>
+</div>
+<script src="js/signup.js"></script>
+</body>
+</html>
