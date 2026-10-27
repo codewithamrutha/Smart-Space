@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Design Preferences | SMART SPACE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="preferences-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            <div class="logo-mark">S</div>
+
+            <div>
+                <h2>SMART SPACE</h2>
+                <span>AI INTERIOR DESIGN</span>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Home</a>
+            <a href="dashboard.html">My Spaces</a>
+            <a href="dashboard.html">Floor Plan</a>
+            <a href="#how">How it works</a>
+        </div>
+
+        <div class="nav-profile">
+            <div class="profile-avatar" id="profileAvatar">A</div>
+
+            <div class="profile-info">
+                <strong id="profileName">User</strong>
+                <span>My Account</span>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- HEADER -->
+    <section class="preferences-header">
+
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>/</span>
+            <a href="room.html">Room</a>
+            <span>/</span>
+            <strong>Preferences</strong>
+        </div>
+
+        <div class="preferences-heading">
+
+            <span class="eyebrow">STEP 02 · YOUR STYLE</span>
+
+            <h1>
+                Tell us what feels<br>
+                <span>like you.</span>
+            </h1>
+
+            <p>
+                Your choices help SMART SPACE create a room
+                that matches your personality, lifestyle,
+                comfort and budget.
+            </p>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+        <div class="preference-progress">
+
+            <div class="progress-item completed">
+                <div class="progress-circle">✓</div>
+                <span>Room</span>
+            </div>
+
+            <div class="progress-line active"></div>
+
+            <div class="progress-item active">
+                <div class="progress-circle">2</div>
+                <span>Preferences</span>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-item">
+                <div class="progress-circle">3</div>
+                <span>AI Design</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN -->
+    <main class="preferences-container">
+
+
+        <!-- SELECTED ROOM -->
+        <div class="preference-room-bar">
+
+            <div>
+                <span>DESIGNING</span>
+                <h3 id="preferenceRoom">Living Room</h3>
+            </div>
+
+            <div class="room-status">
+                <span class="status-dot"></span>
+                Room information added
+            </div>
+
+        </div>
+
+
+        <!-- STYLE -->
+        <section class="preference-section">
+
+            <div class="preference-section-heading">
+
+                <div class="section-number">01</div>
+
+                <div>
+                    <h2>Choose your interior style</h2>
+
+                    <p>
+                        Select the aesthetic that best represents
+                        how you want your space to feel.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="style-grid">
+
+                <label class="style-card selected">
+
+                    <input
+                        type="radio"
+                        name="style"
+                        value="Modern"
+                        checked
+                    >
+
+                    <div class="style-image modern-style">
+                        <span>Modern</span>
+                    </div>
+
+                    <div class="style-card-bottom">
+                        <strong>Modern</strong>
+                        <span>Clean · Simple · Elegant</span>
+                    </div>
+
+                </label>
+
+
+                <label class="style-card">
+
+                    <input
+                        type="radio"
+                        name="style"
+                        value="Minimalist"
+                    >
+
+                    <div class="style-image minimalist-style">
+                        <span>Minimalist</span>
+                    </div>
+
+                    <div class="style-card-bottom">
+                        <strong>Minimalist</strong>
+                        <span>Calm · Clean · Functional</span>
+                    </div>
+
+                </label>
+
+
+                <label class="style-card">
+
+                    <input
+                        type="radio"
+                        name="style"
+                        value="Scandinavian"
+                    >
+
+                    <div class="style-image scandinavian-style">
+                        <span>Scandinavian</span>
+                    </div>
+
+                    <div class="style-card-bottom">
+                        <strong>Scandinavian</strong>
+                        <span>Warm · Natural · Cozy</span>
+                    </div>
+
+                </label>
+
+
+                <label class="style-card">
+
+                    <input
+                        type="radio"
+                        name="style"
+                        value="Traditional"
+                    >
+
+                    <div class="style-image traditional-style">
+                        <span>Traditional</span>
+                    </div>
+
+                    <div class="style-card-bottom">
+                        <strong>Traditional</strong>
+                        <span>Classic · Rich · Timeless</span>
+                    </div>
+
+                </label>
+
+
+                <label class="style-card">
+
+                    <input
+                        type="radio"
+                        name="style"
+                        value="Bohemian"
+                    >
+
+                    <div class="style-image bohemian-style">
+                        <span>Bohemian</span>
+                    </div>
+
+                    <div class="style-card-bottom">
+                        <strong>Bohemian</strong>
+                        <span>Creative · Colorful · Artistic</span>
+                    </div>
+
+                </label>
+
+
+                <label class="style-card">
+
+                    <input
+                        type="radio"
+                        name="style"
+                        value="Luxury"
+                    >
+
+                    <div class="style-image luxury-style">
+                        <span>Luxury</span>
+                    </div>
+
+                    <div class="style-card-bottom">
+                        <strong>Luxury</strong>
+                        <span>Premium · Sophisticated · Bold</span>
+                    </div>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLORS -->
+        <section class="preference-section">
+
+            <div class="preference-section-heading">
+
+                <div class="section-number">02</div>
+
+                <div>
+                    <h2>Pick your color mood</h2>
+
+                    <p>
+                        Choose a palette that you'd love to see
+                        throughout your room.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="color-grid">
+
+                <label class="color-option selected">
+
+                    <input
+                        type="radio"
+                        name="color"
+                        value="Warm Neutrals"
+                        checked
+                    >
+
+                    <div class="color-preview warm-neutral">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <strong>Warm Neutrals</strong>
+                    <span>Beige · Cream · Brown</span>
+
+                </label>
+
+
+                <label class="color-option">
+
+                    <input
+                        type="radio"
+                        name="color"
+                        value="Cool Neutrals"
+                    >
+
+                    <div class="color-preview cool-neutral">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <strong>Cool Neutrals</strong>
+                    <span>White · Grey · Charcoal</span>
+
+                </label>
+
+
+                <label class="color-option">
+
+                    <input
+                        type="radio"
+                        name="color"
+                        value="Earthy"
+                    >
+
+                    <div class="color-preview earthy">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <strong>Earthy</strong>
+                    <span>Olive · Terracotta · Sand</span>
+
+                </label>
+
+
+                <label class="color-option">
+
+                    <input
+                        type="radio"
+                        name="color"
+                        value="Pastel"
+                    >
+
+                    <div class="color-preview pastel">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <strong>Pastel</strong>
+                    <span>Soft · Light · Relaxing</span>
+
+                </label>
+
+
+                <label class="color-option">
+
+                    <input
+                        type="radio"
+                        name="color"
+                        value="Bold"
+                    >
+
+                    <div class="color-preview bold-colors">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <strong>Bold & Vibrant</strong>
+                    <span>Rich · Dramatic · Expressive</span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- FURNITURE -->
+        <section class="preference-section">
+
+            <div class="preference-section-heading">
+
+                <div class="section-number">03</div>
+
+                <div>
+                    <h2>What furniture do you need?</h2>
+
+                    <p>
+                        Select everything you'd like SMART SPACE
+                        to consider in your design.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="choice-grid">
+
+                <label class="choice-card">
+
+                    <input
+                        type="checkbox"
+                        name="furniture"
+                        value="Sofa"
+                    >
+
+                    <span class="choice-icon">🛋️</span>
+
+                    <span class="choice-text">
+                        <strong>Sofa</strong>
+                        <small>Seating</small>
+                    </span>
+
+                    <span class="check-mark">✓</span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input
+                        type="checkbox"
+                        name="furniture"
+                        value="Coffee Table"
+                    >
+
+                    <span class="choice-icon">🪑</span>
+
+                    <span class="choice-text">
+                        <strong>Coffee Table</strong>
+                        <small>Table</small>
+                    </span>
+
+                    <span class="check-mark">✓</span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input
+                        type="checkbox"
+                        name="furniture"
+                        value="TV Unit"
+                    >
+
+                    <span class="choice-icon">📺</span>
+
+                    <span class="choice-text">
+                        <strong>TV Unit</strong>
+                        <small>Entertainment</small>
+                    </span>
+
+                    <span class="check-mark">✓</span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input
+                        type="checkbox"
+                        name="furniture"
+                        value="Storage"
+                    >
+
+                    <span class="choice-icon">🗄️</span>
+
+                    <span class="choice-text">
+                        <strong>Storage</strong>
+                        <small>Organization</small>
+                    </span>
+
+                    <span class="check-mark">✓</span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input
+                        type="checkbox"
+                        name="furniture"
+                        value="Bookshelf"
+                    >
+
+                    <span class="choice-icon">📚</span>
+
+                    <span class="choice-text">
+                        <strong>Bookshelf</strong>
+                        <small>Storage</small>
+                    </span>
+
+                    <span class="check-mark">✓</span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input
+                        type="checkbox"
+                        name="furniture"
+                        value="Plants"
+                    >
+
+                    <span class="choice-icon">🌿</span>
+
+                    <span class="choice-text">
+                        <strong>Indoor Plants</strong>
+                        <small>Decor</small>
+                    </span>
+
+                    <span class="check-mark">✓</span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIGHTING -->
+        <section class="preference-section">
+
+            <div class="preference-section-heading">
+
+                <div class="section-number">04</div>
+
+                <div>
+                    <h2>Set your lighting preference</h2>
+
+                    <p>
+                        Lighting can completely change the atmosphere
+                        of a room.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="lighting-grid">
+
+                <label class="lighting-option selected">
+
+                    <input
+                        type="radio"
+                        name="lighting"
+                        value="Warm"
+                        checked
+                    >
+
+                    <span class="lighting-icon">☀️</span>
+
+                    <div>
+                        <strong>Warm & Cozy</strong>
+                        <p>Soft golden lighting for a comfortable atmosphere.</p>
+                    </div>
+
+                </label>
+
+
+                <label class="lighting-option">
+
+                    <input
+                        type="radio"
+                        name="lighting"
+                        value="Cool"
+                    >
+
+                    <span class="lighting-icon">💡</span>
+
+                    <div>
+                        <strong>Cool & Bright</strong>
+                        <p>Clear lighting for a fresh and energetic environment.</p>
+                    </div>
+
+                </label>
+
+
+                <label class="lighting-option">
+
+                    <input
+                        type="radio"
+                        name="lighting"
+                        value="Natural"
+                    >
+
+                    <span class="lighting-icon">🌤️</span>
+
+                    <div>
+                        <strong>Natural Focus</strong>
+                        <p>Maximize daylight and use minimal artificial lighting.</p>
+                    </div>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUDGET -->
+        <section class="preference-section">
+
+            <div class="preference-section-heading">
+
+                <div class="section-number">05</div>
+
+                <div>
+                    <h2>What's your budget?</h2>
+
+                    <p>
+                        We'll prioritize furniture and decor
+                        that fit within your budget.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="budget-grid">
+
+                <label class="budget-card">
+
+                    <input
+                        type="radio"
+                        name="budget"
+                        value="Below ₹50,000"
+                    >
+
+                    <span>₹</span>
+
+                    <strong>Below ₹50,000</strong>
+
+                    <small>Budget Friendly</small>
+
+                </label>
+
+
+                <label class="budget-card selected">
+
+                    <input
+                        type="radio"
+                        name="budget"
+                        value="₹50,000 - ₹1,00,000"
+                        checked
+                    >
+
+                    <span>₹₹</span>
+
+                    <strong>₹50,000 – ₹1,00,000</strong>
+
+                    <small>Balanced</small>
+
+                </label>
+
+
+                <label class="budget-card">
+
+                    <input
+                        type="radio"
+                        name="budget"
+                        value="₹1,00,000 - ₹2,00,000"
+                    >
+
+                    <span>₹₹₹</span>
+
+                    <strong>₹1,00,000 – ₹2,00,000</strong>
+
+                    <small>Premium</small>
+
+                </label>
+
+
+                <label class="budget-card">
+
+                    <input
+                        type="radio"
+                        name="budget"
+                        value="Above ₹2,00,000"
+                    >
+
+                    <span>₹₹₹₹</span>
+
+                    <strong>Above ₹2,00,000</strong>
+
+                    <small>Luxury</small>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- SPECIAL REQUIREMENTS -->
+        <section class="preference-section">
+
+            <div class="preference-section-heading">
+
+                <div class="section-number">06</div>
+
+                <div>
+                    <h2>Anything else we should know?</h2>
+
+                    <p>
+                        Tell us about any special requirements
+                        or personal preferences.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="specialRequirements"
+                class="requirements-box"
+                placeholder="Example: I need more storage, I prefer easy-to-clean furniture, I want space for a work desk..."
+                maxlength="500"
+            ></textarea>
+
+            <div class="character-count">
+                <span id="characterCount">0</span>/500
+            </div>
+
+        </section>
+
+
+        <!-- FINAL ACTION -->
+        <div class="generate-section">
+
+            <div class="generate-message">
+
+                <div class="ai-sparkle">✦</div>
+
+                <div>
+                    <strong>
+                        Ready to create your personalized space?
+                    </strong>
+
+                    <span>
+                        SMART SPACE will combine your room information
+                        and preferences to create your design.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                class="generate-btn"
+                onclick="generateDesign()"
+            >
+                Generate My Design
+                <span>✦</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/preferences.js"></script>
+
+</body>
+</html>
